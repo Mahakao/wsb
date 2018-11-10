@@ -1,0 +1,5 @@
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WS_WCF_JSON\bin\WS_WCF_JSON.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WS_WCF_JSON\bin\WS_WCF_JSON.pdb
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WS_WCF_JSON\obj\Debug\WS_WCF_JSON.csprojResolveAssemblyReference.cache
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WS_WCF_JSON\obj\Debug\WS_WCF_JSON.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WS_WCF_JSON\obj\Debug\WS_WCF_JSON.pdb

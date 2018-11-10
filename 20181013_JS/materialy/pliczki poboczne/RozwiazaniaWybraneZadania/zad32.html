@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="skrypty/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div.szkolenia h1").click(function()
+            {
+                $(this).next().slideToggle(1500);
+            });
+            //h1.click {p.toggle}  >p.slide/fade
+        });
+    </script>
+</head>
+<body>
+    <div class="szkolenia">
+        <h1>JavaScript</h1>
+        <p id="p1" style="position:absolute;left: 200px;" >
+            JavaScript jest językiem skryptowym przeznaczonym do wykorzystania na stronach internetowych.
+            Co to oznacza? Dzięki niemu możesz w łatwy sposób poprawić interaktywność na swoich stronach. Możesz w odpowiedni sposób oddziaływać na poczynania użytkownika. Możesz robić naprawdę dużo fajnych rzeczy ;). A dzięki temu, że wszystkie czynności wykonywane są po stronie klienta - wszystko to wykonuje się w błyskawicznym tempie.
+
+            Trzeba jednak sobie coś na wstępie powiedzieć. Co z tego, że na stronie umieścisz masę różnego rodzaju zegarków czy najróżniejszych kalendarzy, skoro tak naprawdę w większości przypadków nikomu to nie jest potrzebne. Podstawową wadą niektórych osób piszących w JavaScripcie jest to, iż przesadzają z liczbą efektów umieszczonych na swojej stronie. JavaScript służy nie do tego aby się popisywać jakim to jesteśmy wielkim programistą, ale przede wszystkim do tego aby zwiększyć funkcjonalność naszej strony...
+            Po tym miłym akcencie zapraszam do nauki =).
+        </p>
+        <h1>JavaScript - v2</h1>
+        <p style="display:none;">
+            JavaScript jest językiem skryptowym przeznaczonym do wykorzystania na stronach internetowych.
+            Co to oznacza? Dzięki niemu możesz w łatwy sposób poprawić interaktywność na swoich stronach. Możesz w odpowiedni sposób oddziaływać na poczynania użytkownika. Możesz robić naprawdę dużo fajnych rzeczy ;). A dzięki temu, że wszystkie czynności wykonywane są po stronie klienta - wszystko to wykonuje się w błyskawicznym tempie.
+
+            Trzeba jednak sobie coś na wstępie powiedzieć. Co z tego, że na stronie umieścisz masę różnego rodzaju zegarków czy najróżniejszych kalendarzy, skoro tak naprawdę w większości przypadków nikomu to nie jest potrzebne. Podstawową wadą niektórych osób piszących w JavaScripcie jest to, iż przesadzają z liczbą efektów umieszczonych na swojej stronie. JavaScript służy nie do tego aby się popisywać jakim to jesteśmy wielkim programistą, ale przede wszystkim do tego aby zwiększyć funkcjonalność naszej strony...
+            Po tym miłym akcencie zapraszam do nauki =).
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿#version=1.2.3 
+CACHE MANIFEST 
+CACHE:
+Mod9_StronaZCache.html 
+site.css 
+graphics/logo.jpg 
+NETWORK: 
+login 
+# alternatives paths 
+FALLBACK: 
+ajax/account/ noCode.htm 

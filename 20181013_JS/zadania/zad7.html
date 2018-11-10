@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Zadanie 7</title>
+</head>
+<body>
+    
+    <script>
+        window.onload = function() {
+            var btnCheck = document.getElementById("btn");
+            var amount = document.getElementById("amount");
+            var answer = document.getElementById("pResult");
+            btnCheck.onclick = function() {
+                const percentage = 1.03;
+                const inflation = 0.98;
+                var amount = document.getElementById("amount").value;
+                for (i=1; i < 11; i++) {
+
+                    amount = (percentage * amount) * inflation;
+
+                    if (amount >= 1000000) {
+                        document.getElementById("pResult").innerHTML = amount + " You have saved enough amount of money";
+                        break;
+                    } else {
+                        document.getElementById("pResult").innerHTML = amount + " Sorry, you don't have enough money";
+                    }
+                }
+            } 
+        }
+    </script>
+
+    <input id="amount" type="number" placeholder="amount"/>
+    <input id="btn" type="button" value="Calculate"/>
+    <p id="pResult"></p>
+
+</body>
+</html>

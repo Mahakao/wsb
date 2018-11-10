@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function(){
+            var btnCheck = document.getElementById("btnCheck");
+            btnCheck.onclick = function() {
+                var number = document.getElementById("nNumber").value;
+                var result = 1;
+                for (var i = 2; i <= number; i++) {
+                    // result = result * i;
+                    result *= i;
+                }
+
+                document.getElementById("pResult").innerHTML = "Factorial for " + number + " is " + result;
+                
+                // for (var i=2; i<10; i++)
+                
+                // if (num == 0 || num == 1) {
+                //     document.getElementById("pResult").innerHTML = "1";
+                // } else {
+
+                // }
+                //in progress
+            }
+            
+
+        }
+
+    </script>
+
+    <input id="nNumber" type="number" placeholder="Number"/>
+    <input id="btnCheck" type="button" value="Calculate"/>
+    <p id="pResult"></p>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script>
+
+        $(function () {
+            $("#imie").bind("input",sprawdz);           
+            $("#losowanie").click(function () {
+                try {
+                    var wynik = $("#liczba").val() * 3;
+                    if (isNaN(wynik)) {
+                        throw "nie liczba";
+                    }
+                } catch (e) {
+                    if (e == "nie liczba") {
+                        alert(e);
+                        alert("Nie liczba");
+                    }
+                }
+            });
+        });
+        function sprawdz() {
+            var imie = document.getElementById("imie");
+            if (imie.value.trim().length < 3) {
+                imie.setCustomValidity("Zbyt krótkie imię");
+            }
+            else {
+                imie.setCustomValidity("");                
+            }
+            var wiek = document.getElementById("wiek");
+            if (wiek.checkValidity() ==false) {
+                var formatka = document.getElementsByTagName("form")[0];
+                $("form").append("<p>AAAAA</p>");
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form method="post" onsubmit="return sprawdz();">
+        <input id="wiek" type="number" min="10" max="100" value="30" />
+        <input id="imie" type="text" required />
+        <input id="liczba" type="text" required />
+        <button type="button" id="losowanie">losuj</button>
+
+        <button type="submit">przeslij</button>
+    </form>
+</body>
+</html>

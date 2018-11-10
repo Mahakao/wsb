@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="skrypty/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("tr:nth-child(3n)").css("background", "red");
+
+            $("p").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "lightgray");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "lightblue");
+                },
+                click: function () {
+                    $(this).css("background-color", "yellow");
+                }
+            });
+
+        });
+
+    </script>
+
+    <script>
+        var Pozycja = function(nazwa, liczba, cena) {
+            this.nazwa = nazwa; this.cena = cena; this.liczba = liczba;
+        }
+        var Koszyk = function (imie, nazwisko, adres) {
+            this.imie = imie;
+            this.nazwisko = nazwisko;
+            this.adres = adres;
+            this.pozycje = [];
+        }
+        Koszyk.prototype = {
+            dodaj: function (nazwa, liczba, cena) {
+                this.pozycje.push(new Pozycja(nazwa,liczba,cena));
+            },
+            usun: function (nazwa) {                
+            }
+        };
+
+        var koszykKlient = new Koszyk("Michał", "Kuciapski", "Okopowa 56");
+
+
+        window.onload = function () {
+            //var koszykKlient = new Koszyk("Michał", "Kuciapski", "Okopowa 56");
+            //koszykKlient.dodaj("Laptop", 1, 2000.0);
+            //koszykKlient.dodaj("Tablet", 2, 1000.0);
+
+            //alert(koszykKlient.pozycje.length);
+            var przyciskiDodanie = document.querySelectorAll("input[value=dodaj]");
+            for (var i = 0; i < przyciskiDodanie.length; i++) {
+                przyciskiDodanie[i].addEventListener("click", function () {
+                    var liczbaSztuk = this.previousSibling.previousSibling.value;
+                    var produkt =
+                        this.previousSibling.previousSibling.previousSibling.previousSibling.value;
+                    koszykKlient.dodaj(produkt, liczbaSztuk, 1000);
+                });
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <select>
+                    <option>Krzesło</option>
+                    <option>Stół</option>
+                </select>
+                <input type="text" />
+                <input type="button" value="dodaj" />
+            </td>
+        </tr>
+    </table>
+    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+    <input type="button" value="wyswietl" 
+           onclick="alert('Masz ' + koszykKlient.pozycje.length + ' pozycji zamówienia');" />
+</body>
+</html>

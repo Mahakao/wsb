@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#wiecej").click(function () {
+                var szerokosc = $("#definicja").css("width");
+                szerokosc = parseInt(szerokosc) + 100;
+                $("#definicja").css("width", szerokosc + "px");
+                $("#wiecej").blur();
+            });
+
+            $("#mniej").click(function () {
+                var szerokosc = $("#definicja").css("width");
+                szerokosc = parseInt(szerokosc) - 100;
+                $("#definicja").css("width", szerokosc + "px");
+                $("#wiecej").blur();
+            });
+
+            $(window).bind('onbeforeunload', function (e) {
+                return "Czy na pewno chcesz wyjść?";
+            });
+        });
+        
+        function blokowanieKopiowania() {
+            var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
+            if (event.ctrlKey && (pressedKey == "c" ||
+                pressedKey == "v")) {
+                // disable key press porcessing
+                event.returnValue = false;
+            }
+        }
+    </script>
+    
+</head>
+<body onkeydown = "blokowanieKopiowania()" oncontextmenu="return false"> <!--Tutaj-->
+    <div id="content">
+        <div id="definicja" style="background:black;color:white;float:left;width:400px">
+            JavaScript is the world's most popular programming language. It is the language for HTML and the web, for servers, PCs, laptops, tablets, smart phones, and more.
+
+            JavaScript is a Scripting Language
+            A scripting language is a lightweight programming language.
+
+            JavaScript is programming code that can be inserted into HTML pages.
+
+            JavaScript inserted into HTML pages, can be executed by all modern web browsers.
+
+            JavaScript is easy to learn.
+        </div>
+        <div style="float:left">
+            <img src="Images/lewo.jpg" id="mniej" style="width:40px;cursor:e-resize" />
+            <img src="Images/prawo.jpg" id="wiecej" style="width:40px;cursor:e-resize"/>
+        </div>
+    </div>
+</body>
+</html>

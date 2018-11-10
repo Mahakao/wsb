@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.5.1.js"></script>
+    <style type="text/css">
+        input {
+            width: 200px;
+        }
+
+        label {
+            width: 200px;
+            font-family: Verdana, Arial;
+            font-size: 18px;
+            line-height: 25px;
+            display: inline-block;
+        }
+
+        input:required {
+            border-color: black;
+            border-width: 2px;
+        }
+
+        input:invalid {
+            background: red;
+        }
+
+        input:valid {
+            background: transparent;
+        }
+
+        input.validacjaBlad {
+            border-color: palevioletred;
+            border-style: dotted;
+        }
+
+        input.validacjaOk {
+            border-style: none;
+        }
+    </style>
+    <script>
+        var kontrolkaWiek;
+        $(document).ready(function () {
+
+            kontrolkaWiek = document.getElementById("iWiek");
+            kontrolkaWiek.addEventListener("input", sprawdzWiek, false);
+
+            //Asynchroniczne sprawdzenie dostępności loginu
+            $("#iLogin").keyup(function () {
+
+                var request = getXMLHttpRequest();
+                var login = $("#iLogin").val();
+                if (login.length < 2) {
+                    $("#lIstnieje").text("");
+                    return;
+                }
+                var url = "http://localhost:20943/konta.svc/KontoIstnieje/" + login;
+                request.onreadystatechange = function () {
+                    //if (request.status != 200) {
+                    //    alert("Błąd: " + request.status + " - " + request.statusText);
+                    //}
+                    if (request.readyState == 4) {
+                        var typ = request.getResponseHeader("Content-Type");
+                        var wynik;
+                        switch (typ) {
+                            case "text/xml":
+                                wynik = request.responseXML;
+                                $("#lIstnieje").text(wynik);
+                                break;
+                            case "application/json":
+                            case "application/json; charset=utf-8":
+                                wynik = JSON.parse(request.responseText);
+                                if (wynik.KontoIstniejeResult) {
+                                    $("#lIstnieje").text("Konto już istnieje");
+                                    $("#lIstnieje").css("color", "red");
+                                } else {
+                                    $("#lIstnieje").text("Konto jest dostępne");
+                                    $("#lIstnieje").css("color", "green");
+                                }
+                                break;
+                            default:
+                                wynik = request.responseText;
+                                $("#lIstnieje").text(wynik);
+                        }
+                    }
+                };
+                
+                request.open("GET", url, true);
+                request.send();
+            });
+
+
+            //JAVASCRIPT POST
+            $("#iHaslo").keyup(function () {
+                var request = getXMLHttpRequest();
+                var haslo = $("#iHaslo").val();
+                if (haslo.length < 2) {
+                    $("#lSila").text("");
+                    return;
+                }
+                var url = "http://localhost:20943/konta.svc/SilaHasla";
+                request.onreadystatechange = function () {
+                    //if (request.status != 200) {
+                    //    alert("Błąd: " + request.status + " - " + request.statusText);
+                    //}
+                    if (request.readyState == 4) {
+                        var typ = request.getResponseHeader("Content-Type");
+                        var wynik;
+                        switch (typ) {
+                            case "text/xml":
+                                wynik = request.responseXML;
+                                $("#lSila").text(wynik);
+                                break;
+                            case "application/json":
+                            case "application/json; charset=utf-8":
+                                wynik = JSON.parse(request.responseText);
+                                $("#lSila").text(wynik.SilaHaslaResult);
+                                if (wynik.SilaHaslaResult == "słabe") {
+                                    $("#lSila").css("color", "red");
+                                } else {
+                                    $("#lSila").css("color", "green");
+                                }
+                                break;
+                            default:
+                                wynik = request.responseText;
+                                $("#lSila").text(wynik);
+                        }
+                    }
+                };
+                request.open("POST", url, true);
+                request.setRequestHeader("Content-Type", "application/json");
+                var obiekt = new DaneHasla(haslo);
+
+                //var dane = '{"haslo":"' + haslo + '"}';  //TAK TEŻ MOŻNA
+                var dane = JSON.stringify(obiekt);
+                
+                request.send(dane);
+            });
+
+            //WERSJA JQUERY - SPRAWDZENIE LOGINU
+                //$("#iLogin").keyup(function () {
+                //    var login = $("#iLogin").val();
+                //    if (login.length < 2) {
+                //        $("#lIstnieje").text("");
+                //        return;
+                //    }
+                //    var url = "http://localhost:20943/konta.svc/KontoIstnieje/" + login;
+                //    $.get(url, function (dane) {
+                //        if (dane.KontoIstniejeResult) {
+                //            $("#lIstnieje").text("Konto już istnieje");
+                //            $("#lIstnieje").css("color", "red");
+                //        } else {
+                //            $("#lIstnieje").text("Konto jest dostępne");
+                //            $("#lIstnieje").css("color", "green");
+                //        }
+                //    }).error(function (e) {
+                //        alert("Błąd sprawdzenia loginu: " + JSON.stringify(e));
+                //    });
+                //});
+        });
+
+        function DaneHasla(parHaslo) {
+            this.haslo = parHaslo;
+        }
+
+        function getXMLHttpRequest() {
+            if (window.XMLHttpRequest) {
+                return new window.XMLHttpRequest;
+            } else {
+                try {
+                    return new ActiveXObject("MSXML2.XMLHTTP.3.0");
+                } catch (ex) {
+                    return null;
+                }
+            }
+        }
+
+        function sprawdzWiek() {
+            var wiek = $("#iWiek").val();
+            if (wiek < 18) {
+                kontrolkaWiek.setCustomValidity("Wiek powinien być powyżej 18 lat");
+            } else {
+                kontrolkaWiek.setCustomValidity("");
+            }
+        }
+
+        function walidacjaFormatka() {
+            if (daneMajaZnaczenie(document.getElementById("iNazwisko").value)) {
+                document.getElementById("iNazwisko").className = "validacjaOk";
+                return true;
+            } else {
+                document.getElementById("iNazwisko").className = "validacjaBlad";
+                return false;
+            }
+        }
+
+        function daneMajaZnaczenie(tekst) {
+            var notWhitespaceTestRegex = /[^\s]{1,}/;
+            return String(tekst).search(notWhitespaceTestRegex) != -1;
+        }
+
+    </script>
+</head>
+<body>
+    <form method="post" onsubmit="return walidacjaFormatka();">
+        <div>
+            <label for="iLogin">Login: </label>
+            <input name="iLogin" id="iLogin" type="text" required="required" />
+            <label id="lIstnieje"></label>
+        </div>
+
+        <div>
+            <label for="iHaslo">Hasło: </label>
+            <input name="iHaslo" id="iHaslo" type="text" required="required" />
+            <label id="lSila"></label>
+        </div>
+
+        <div>
+            <label for="iEmail">Adres e-mail: </label>
+            <input name="iEmail" id="iEmail" autofocus="autofocus" type="email" required="required" placeholder="michal.kuciapski@combidata.pl" />
+        </div>
+        <div>
+            <label for="iNazwisko">Nazwisko: </label>
+            <input name="iNazwisko" id="iNazwisko" type="text" required="required" />
+        </div>
+        <div>
+            <label for="iPunkty">Liczba punktów: </label>
+            <input name="iPunkty" id="iPunkty" type="number" step="10" max="100" min="30" />
+        </div>
+        <div>
+            <label for="iWiek">Wiek: </label>
+            <input name="iWiek" id="iWiek" type="number" />
+        </div>
+        <div>
+            <input type="submit" value="Prześlij" />
+        </div>
+    </form>
+</body>
+</html>

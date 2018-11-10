@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            var btnCheck = document.getElementById("btn");
+            var number = document.getElementById("nNum");
+            btnCheck.onclick = function() {
+                var number = document.getElementById("nNum").value;
+                var result = "prime number";
+                document.getElementById("pResult").innerHTML = result;
+                for (i = 2; i < number; i++){
+                    if (number % i == 0) {
+                        result = "not prime number";
+                        document.getElementById("pResult").innerHTML = result;
+                        break;
+                    }
+                }
+            }
+
+        
+        }
+    </script>
+
+    <input id="nNum" type="number" placeholder="number"/>
+    <input id="btn" type="button" value="check if prime"/>
+    <p id="pResult"></p>
+
+
+</body>
+</html>

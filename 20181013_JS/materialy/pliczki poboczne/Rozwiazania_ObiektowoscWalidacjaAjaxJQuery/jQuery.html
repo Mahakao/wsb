@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.js"></script>
+    <script>
+        $(function () {
+            $(document).tooltip();
+            $("ul li").mouseenter(function () {
+                $(this).css("font-size", (Number($(this).css("font-size").replace("px","")) * 2) + "px");
+                //alert(czcionka);
+                //$(this).toggleClass("nowa");
+            });
+            $("ul li").mouseleave(function () {
+                $(this).css("font-size", (Number($(this).css("font-size").replace("px", "")) / 2) + "px");
+                //alert(czcionka);
+                //$(this).toggleClass("nowa");
+            });
+            $("#gora").mouseenter(function () {
+                $("html, body").animate(
+                    {
+                        scrollTop: $("#start").offset().top
+                    }, 3000
+                    );
+            });
+        });
+
+    </script>
+    <style> 
+    .nowa{
+        font-size:32px;
+    }
+    </style>
+</head>
+<body>
+    <ul id="start" style="width:200px;" title="Ale tooltip">
+        <li>Adam</li>
+        <li>Anna</li>
+        <li>Jan</li>
+        <li>Tomasz</li>
+    </ul>
+
+    <div style="height:1000px;"></div>
+    <p id="gora" style="background-color:red;width:100px;height:100px;"></p>
+</body>
+</html>

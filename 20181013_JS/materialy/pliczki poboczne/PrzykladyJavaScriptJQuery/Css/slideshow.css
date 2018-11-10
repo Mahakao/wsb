@@ -1,0 +1,29 @@
+/* slideshow */
+
+#slideshow
+{
+	height: 295px;
+	width: 775px;
+	float: left;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#slideshow img
+{
+	position: absolute;
+	left: 0px;
+	z-index: 1;
+	width: 775px;
+	height: 265px;
+}
+
+#slideshow img.active
+{
+	z-index: 3;
+}
+
+#slideshow img.last-active
+{
+	z-index: 2;
+}

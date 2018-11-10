@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C827D47-50B1-4795-A1A1-C2B3D6A72CAA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameStore.Html</RootNamespace>
+    <AssemblyName>GameStore.Html</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Mod5_JavaScript_WywolanieAjaxPost.html" />
+    <Content Include="Mod3_JavaScript_BlokadaKopiowania.html" />
+    <Content Include="Images\inter.jpg" />
+    <Content Include="Images\lewo.jpg" />
+    <Content Include="Images\prawo.jpg" />
+    <Content Include="Mod3_JQueryZmianaRozmiaru.html" />
+    <Content Include="Mod3_JQuery_Accordion_BezForEachAnimacja.html" />
+    <Content Include="Mod3_JQuery_Accorion_ForEach.html" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\box-game.jpg" />
+    <Content Include="Images\cart-button.png" />
+    <Content Include="Images\cart-green-icon.png" />
+    <Content Include="Images\cart-header-icon.png" />
+    <Content Include="Images\cart-icon.png" />
+    <Content Include="Images\game-details.jpg" />
+    <Content Include="Images\game.jpg" />
+    <Content Include="Images\graph.jpg" />
+    <Content Include="Images\i-icon.png" />
+    <Content Include="Images\mpicture.png" />
+    <Content Include="Images\page-button-active.png" />
+    <Content Include="Images\page-button.png" />
+    <Content Include="Images\plain-button.png" />
+    <Content Include="Images\spic1.png" />
+    <Content Include="Images\spic2.png" />
+    <Content Include="Images\spic3.png" />
+    <Content Include="Images\spic4.png" />
+    <Content Include="Images\spotlight.png" />
+    <Content Include="Images\star.jpg" />
+    <Content Include="Images\starwars.jpg" />
+    <Content Include="Images\strip.png" />
+    <Content Include="Images\x.jpg" />
+    <Content Include="Mod3_JQuery_ZdarzeniaNajechanie.html" />
+    <Content Include="Scripts\web_worker2.js" />
+    <Content Include="Scripts\datetime.js" />
+    <Content Include="Scripts\GlobalFunctions.js" />
+    <Content Include="packages.config" />
+    <Content Include="Mod5_WywolanieAsync_JScript_JQuery.html" />
+    <Content Include="appcache.manifest" />
+    <None Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Mod3_JQuery_PrzechodzenieAnimacja.html" />
+    <Content Include="Scripts\offline.js" />
+    <Content Include="Scripts\web_worker1.js" />
+    <Content Include="Scripts\_namespace.js" />
+    <Content Include="Styles\cart.css" />
+    <Content Include="Styles\catalog.css" />
+    <Content Include="Styles\dragdrop.css" />
+    <Content Include="Styles\footer.css" />
+    <Content Include="Styles\game.css" />
+    <Content Include="Styles\header.css" />
+    <Content Include="Styles\mobile.css" />
+    <Content Include="Styles\nav.css" />
+    <Content Include="Styles\pages\about.css" />
+    <Content Include="Styles\print.css" />
+    <Content Include="Styles\site.css" />
+    <Content Include="Styles\slideshow.css" />
+    <Content Include="Styles\spotlight.css" />
+    <Content Include="Styles\theme.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2280</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4949/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

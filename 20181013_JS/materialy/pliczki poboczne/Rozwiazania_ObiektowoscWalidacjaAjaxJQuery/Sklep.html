@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var Pozycja = function (nazwa, liczbaSztuk, cena) {
+            this.nazwa = nazwa;
+            this.liczbaSztuk = liczbaSztuk;
+            this.cena = cena;
+        };
+        var Koszyk = function (imie, nazwisko, adres) {
+            this.imie;
+            this.nazwisko;
+            this.adres;
+            this.pozycje = [];            
+        };
+
+        var k1;
+
+        (function () {
+            k1 = new Koszyk("Michał", "Kuciapski", "Leśna 2");
+            Koszyk.prototype.dodajDoKoszyka = function(nazwa,cena,liczbSztuk){
+                this.pozycje[this.pozycje.length] = new Pozycja(nazwa,liczbaSztuk,cena);
+            };
+        })();
+
+        window.onload = function () {
+            var przyciski = document.getElementsByTagName("button");
+            for (var i = 0; i < przyciski.length; i++) {
+                przyciski[i].addEventListener("click", function (nad) {
+                    var wiersz = this.parentNode.parentNode.childNodes;
+                    var nazwa = wiersz[3].innerHTML;
+                    var cena = wiersz[5].innerHTML;
+                    liczbaSztuk = wiersz[7].firstChild.value;
+                    k1.dodajDoKoszyka(nazwa, cena, liczbaSztuk);
+                }, false);
+            }
+        }
+
+        function koszyk() {
+            alert(k1.pozycje.length);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>Krzesło</td>
+            <td>300.0</td>
+            <td><input type="number" /></td>
+            <td><button type="button">dodaj</button></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Lampa</td>
+            <td>200.0</td>
+            <td><input type="number" /></td>
+            <td><button type="button">dodaj</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Stół</td>
+            <td>400.0</td>
+            <td><input type="number" /></td>
+            <td><button type="button">dodaj</button></td>
+        </tr>
+    </table>
+    <button type="button" onclick="koszyk()">Wyswietl koszyk</button>
+</body>
+</html>

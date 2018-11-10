@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contoso, Ltd</title>
+</head>
+<body>
+    <div class="container">
+        <p id="logo">Contoso, Ltd</p>
+        <div class="nav">
+            <!-- unordered list -->
+            <a class="go-to-cart-link money-text" href="#">Go to Cart </a>
+        </div>
+        <div id="slideshow">
+            <img src="images/mpicture.png" alt="Game 1" class="active" />
+            <img src="images/game.jpg" alt="Game 2" />
+            <img src="images/spic1.png" alt="Game 3" />
+        </div>
+        <div id="spotlight" class="box">
+            <div class="header">
+                Spotlight
+            </div>
+            <div class="content">
+            </div>
+            <div class="footer">
+                Amazing Entertainment
+            </div>
+        </div>
+        <div id="cart" class="box narrow">
+            <div class="header">
+                Games in Cart
+            </div>
+            <div class="content">
+                <!-- Cart Table -->
+            </div>
+            <div class="footer">
+                <a href="#">
+                    <div class="cart-icon"></div>
+                </a>
+            </div>
+            <div class="drag">
+                <div class="drag-icon">
+                    <img src="images/i-icon.png" alt="info" class="info-icon" />
+                </div>
+                <div class="text">
+                    You can drag items into the cart
+                </div>
+            </div>
+        </div>
+        <div id="catalog">
+            <!-- Genres -->
+        </div>
+        <div class="footer">
+            <p class="text">Copyright <a class="xbox-link" href="http://www.xbox.com">Xbox Site</a></p>
+        </div>
+    </div>
+</body>
+</html>

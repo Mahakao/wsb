@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="skrypty/jquery-1.11.3.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("ul li").mouseenter(function (){
+                var czcionkaRozmiar = $(this).css("font-size").replace("px",""); //16px
+                $(this).css("font-size", czcionkaRozmiar * 2 + "px");
+            });
+            $("ul li").mouseout(function () {
+                var czcionkaRozmiar = $(this).css("font-size").replace("px", ""); //16px
+                $(this).css("font-size", czcionkaRozmiar / 2 + "px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul>
+        <li>JavaScript</li>
+        <li>Sharepoint</li>
+        <li>UML</li>
+        <li>Szacowanie projektów</li>
+        <li>XML</li>
+    </ul>
+</body>
+</html>

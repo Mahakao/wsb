@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script>
+        //window.onload = function()
+        //{
+
+        //}
+
+        function dlugoscLogin(nad)
+        {
+            var tekst = nad.value;
+            var proxyAjax = new XMLHttpRequest();
+
+            proxyAjax.onreadystatechange = function () {
+                if (proxyAjax.readyState == 4) {
+                    //alert(proxyAjax.getResponseHeader("Content-Type"));
+                    var response = JSON.parse(proxyAjax.responseText);
+                    document.getElementById("dlugosc").innerHTML = response.KontoDlugoscResult;
+                }
+            };
+            proxyAjax.open("GET", "http://localhost:54471/Service1.svc/KontoDlugosc/" + tekst);
+            proxyAjax.send();
+        }
+
+        function dodajKonto() {
+            $.ajax(
+                {                    
+                    url: 'http://localhost:54471/Service1.svc/DodajNoweKontoObiekt',
+                    type: 'POST',
+                    //beforeSend: function (request) {
+                    //    request.setRequestHeader('Access-Control-Allow-Headers', '*');
+                    //},
+                    timeout: 10000,
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    processData: false,
+                    crossDomain: true,
+                    cache:true,
+                    data: JSON.stringify({ konto: { Login: "mk", Haslo: "aaaaa" } })
+                })
+                .done(function () { alert("dodano"); })
+                .error(function (msg) { alert(JSON.stringify(msg)); });
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input id="login" type="text" onkeyup="dlugoscLogin(this)" /> <span id="dlugosc"> </span>
+        
+        <button type="button" onclick="dodajKonto()" >Dodaj</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WebSockets\ContosoConf\bin\ContosoConf.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WebSockets\ContosoConf\bin\ContosoConf.pdb
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WebSockets\ContosoConf\obj\Debug\WebSockets.csprojResolveAssemblyReference.cache
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WebSockets\ContosoConf\obj\Debug\ContosoConf.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\WebSockets\ContosoConf\obj\Debug\ContosoConf.pdb

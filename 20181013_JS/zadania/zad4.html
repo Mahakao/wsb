@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        //zdarzenie gdy załadowana strona
+        window.onload = function() {
+            //#region long ver document.getElementById
+            /* document.getElementById("nNumber").value = 11;
+            if(document.getElementById("nNumber").value > 10) {
+                document.getElementById("nNumber").style.color = "red";
+            } */
+
+            /*var nNumber = document.getElementById("nNumber");
+            nNumber.value = 11;
+            if (nNumber.value > 10) {
+                nNumber.style.color = "red";
+            }*/
+            //#endregion
+            
+            var btnCheck = document.getElementById("btnCheck");
+            btnCheck.onclick = function() {
+                var number = document.getElementById("nNumber").value;
+                    if (number%2 == 0) {
+                        document.getElementById("pResult").innerHTML = "Even";
+                    } else {
+                        document.getElementById("pResult").innerHTML = "Odd";
+                    };
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <input id="nNumber" type="number" placeholder="Enter number"/>
+    <input id="btnCheck" type="button" value="Check if even"/>
+    <p id="pResult"></p>
+</body>
+
+</html>

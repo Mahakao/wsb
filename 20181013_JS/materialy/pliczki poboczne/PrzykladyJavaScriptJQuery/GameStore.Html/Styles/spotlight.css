@@ -1,0 +1,26 @@
+/* spotlight */
+
+#spotlight
+{
+	height: 295px;
+	width: 177px;
+	float: right;
+}
+
+#spotlight > .content
+{
+	height: 219px;
+	color: white;
+	font-size: 19px;
+	font-weight: bold;
+	background-image: url(../images/spotlight.png);
+}
+
+#spotlight > footer
+{
+	background: #2a6da9;
+	height: auto;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}

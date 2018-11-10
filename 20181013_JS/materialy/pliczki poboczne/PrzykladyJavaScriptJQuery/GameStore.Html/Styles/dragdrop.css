@@ -1,0 +1,23 @@
+/* drag */
+
+.drag
+{
+	height: 40px;
+	float: left;
+	margin-left: 6px;
+}
+
+.drag-icon
+{
+	height: 35px;
+	width: 35px;
+	float: left;
+}
+
+.drag > .text
+{
+	width: 120px;
+	height: 35px;
+	float: right;
+	margin: 5px 0 0 2px;
+}

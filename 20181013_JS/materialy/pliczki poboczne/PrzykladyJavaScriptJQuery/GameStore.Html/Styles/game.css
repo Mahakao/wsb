@@ -1,0 +1,202 @@
+.game-box
+{
+	display: block;
+	width: 380px;
+	height: 100%;
+	background-color: #fff;
+	border: 2px solid #949494;
+	float: right;
+	padding: 5px 0px 0px 5px;
+}
+
+.game-title
+{
+	float: left;
+	height: 20px;
+	width: 220px;	
+	font-size: 18px;
+	line-height: 16px;
+	text-align: justify;
+	color: #7bc82f;
+	padding: 5px;
+}
+
+.game-subtitle
+{
+	float: left;
+	width: 200px;
+	height: 20px;	
+	font-size: 14px;
+	line-height: 16px;
+	text-align: justify;
+	color: #666;
+	padding: 5px;
+}
+
+.game-description
+{
+	float: left;
+	width: 250px;
+	height: 150px;	
+	font-size: 12px;
+	line-height: 14px;
+	text-align: justify;
+	color: #666;
+	padding: 5px;
+}
+
+.game-properties
+{
+	float: left;
+	width: 234px;
+	padding: 5px;
+}
+
+.game-properties .text
+{
+	float: left;
+	width: 90px;
+	height: 16px;	
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 16px;
+	text-align: justify;
+	color: #666;
+	padding: 5px;
+}
+
+.game-box .line
+{
+	border-bottom: 1px solid #949494;
+	width: 380px;
+	height: 10px;
+	float: left;
+}
+
+.game-box .button-bar
+{
+	clear: none;
+	float: right;
+	width: 126px;
+	height: 28px;
+	padding: 5px;
+}
+
+article .game img
+{
+	width: 127px;
+	height: 92px;
+}
+
+.game-slideshow
+{
+	float: left;
+	margin-bottom: 20px;
+}
+
+.main-slide
+{
+	width: 560px;
+	height: 240px;
+	margin-bottom: 10px;
+}
+
+.main-slide > img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.slide
+{
+	width: 125px;
+	height: 70px;
+	float: left;
+	background-color: #0F0;
+	margin: 0px 20px 10px 0px;
+}
+
+.game-thumbnail
+{
+	padding: 0px;
+	margin: 0px;
+	width: 107px;
+	height: 146px;
+	float: left;
+	padding: 0px 0px 5px 0px; 
+}
+
+.game-info
+{
+	width: 560px;
+	float: left;
+	margin-bottom: 10px;
+	font-size: 12px;
+	color: #5c5c5c;
+	text-align: justify;
+}
+
+.game-info:first-letter
+{
+	font-size: 14px;
+	font-weight: bold;
+	float: left;
+	width: 10px;
+    text-transform: capitalize;
+}
+
+.game-reviews
+{
+	width: 530px;
+	min-height: 400px;
+	float: left;
+	text-align: justify;
+	font-size: 12px;
+	color: #5c5c5c;
+	margin: 10px;
+}
+
+.game-reviews > header > h2
+{
+	font-size: 18px;
+	color: #7bc82f;
+}
+
+.game-reviews > header, .game-reviews > footer
+{
+	position: relative;
+	border-bottom: solid 1px #949494;
+	height: 30px;
+	margin-bottom: 20px;
+}
+
+.game-review
+{
+	margin: 0px 10px 20px;
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.game-review .nickname
+{
+	font-style: italic;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.add-review-link
+{
+	display: block;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	height: 30px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 16px;
+	color: #7bc82f;
+	background-image: url(../images/add.png);
+	background-repeat: no-repeat;
+	text-indent: 20px;
+	padding-top: 7px;
+}

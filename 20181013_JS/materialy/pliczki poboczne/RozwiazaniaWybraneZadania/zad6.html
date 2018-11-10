@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>zad 5</title>
+    <script>
+        (function () {
+            alert(new Date().getDay());
+        })();
+
+        function sprawdzParzystosc() {
+            var liczba = Number(document.getElementById("tLiczba1").value);
+            document.getElementById("pWynik").innerHTML = "Liczba " + liczba +
+                    " nie jest liczbą pierwszą";
+            var znalezionoDzielnik = false;
+            
+            var dataStart = new Date().getTime();
+
+            var pierwLiczba = Math.sqrt(liczba);
+            for (var i = 2; i <= pierwLiczba; i++) {
+                var temp = 10;
+                if (liczba % i == 0) {
+                    znalezionoDzielnik = true;
+                    break;
+                }
+            }
+            if (znalezionoDzielnik) {
+                document.getElementById("pWynik").innerHTML = "Liczba " + liczba +
+                    " nie jest liczbą pierwszą";
+            }
+            else {
+                document.getElementById("pWynik").innerHTML = "Liczba " + liczba +
+                    " jest liczbą pierwszą";
+            }
+            var dataKoniec = new Date().getTime();
+            alert(dataKoniec - dataStart);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <section>
+        <article>
+            <input type="text" id="tLiczba1"/>
+            <input type="button" value="wylicz" id="btnLicz" onclick="sprawdzParzystosc()" />
+            <p style="font-weight:bold" id="pWynik"/>
+        </article>
+        <aside></aside>
+    </section>
+    <footer style="width:100%;height:50px;background-color:blue;"></footer>
+</body>
+</html>
+<!--CRTL + SPACJA - wymuszenie podpowiedzi-->
+<!--CTRL + K + C - komentarz-->
+<!--CTRL + K + U - usunięcie komentarza-->

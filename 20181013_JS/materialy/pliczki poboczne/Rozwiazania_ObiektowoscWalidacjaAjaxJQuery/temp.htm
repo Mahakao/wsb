@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        
+        //document.write(Math.round((Math.random() * 10 + 10), 2));
+
+        //window.onload = function myfunction() {
+        //    document.getElementById("aa").style.fontSize = "40px";
+        //    document.getElementById("aa").innerHTML = 5 % 2 == 0 ? "tak" : "nie";
+
+        //    var wynik = 1;
+        //    for (var i = 2; i < 20; i++) {
+        //        wynik *= i;
+        //    }
+        //    document.getElementById("aa").innerHTML = wynik;
+
+        //    //alert(wyliczenia(4,4).Imie);
+        //}
+        //function wyliczenia(a, b) {
+        //    //TODO1: Rób
+        //    return {Imie: "Adam", Nazwisko: "Kruk"};
+        //}
+
+        window.onload = function myfunction() {
+            document.input
+            var ne =document.createElement("input");
+            ne.setAttribute("value", "abcd");
+            document.body.appendChild(ne);
+            var a = 43434343435000;
+            var b = document.querySelectorAll("input[type=text]");
+            alert(b.length);
+            document.getElementById("b").addEventListener("click", liczNWD, false);
+            document.getElementById("wzrost").addEventListener("keypress", function (event) {
+                var znak = String.fromCharCode(event.keyCode);
+                if (isNaN(znak)) {
+                    document.getElementById("komunikat").innerHTML = "tylko liczby";
+                    event.preventDefault();
+                }
+                else {
+                    document.getElementById("komunikat").innerHTML = "";
+                }
+            },false);
+        }
+        function liczNWD() {
+            var dane = document.getElementById("dataU").value;
+            var data = new Date(dane);
+            var dataA = new Date();
+
+
+            var funkcja = function myfunction(a) {
+
+            }
+            
+            //alert(data.getDay());
+
+
+            if (dataA.getYear()- data.getYear() > 18) {
+                alert("Pełnoletni");
+            }
+
+            //alert(data.getDay());
+
+            //var dane = document.getElementById("l1").value.split(" - ");
+            //if (isNaN(dane) || dane == "") {
+            //    alert("nie liczba");
+            //}
+
+            //var nazwa = dane[0].split(":");
+            //var n = nazwa[1];
+            //var cena = nazwa[1].trim();
+            //var waluta = dane[1];
+
+            //alert(cena);
+            //document.getElementById("w").innerHTML = Euklides(document.getElementById("l1").value, document.getElementById("l2").value);
+        } 
+    </script>
+    <script src="Dane.js"></script>
+</head>
+<body>
+    <input type="text" id="wzrost"/>
+    <span id="komunikat" style="color:red;"></span>
+    <input id="dataU" type="date" value="Date()" />
+    <input type="text" id="l1"/>
+    <input type="text" id="l2" />
+    <input type="button" value="NWD" id="b"/>
+    <label id="w"/>
+    <!--<span id="aa">aaa</span>-->
+</body>
+</html>

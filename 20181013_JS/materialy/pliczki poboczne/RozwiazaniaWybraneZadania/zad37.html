@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="skrypty/jquery-1.11.3.min.js"></script>
+    <script>        
+        window.onload = function () {
+            var kLogin = document.getElementById("login");
+            kLogin.onkeyup = function () {
+                //1. obiekt XMLHTTPRequest 
+                var zadanie = new XMLHttpRequest();
+                //2. przygotowanie żądania
+                var url = "http://localhost:2742/Firma.svc/kIstnieje/" + kLogin.value;
+                zadanie.open("GET", url, true);
+                //3. nadsłuchiwanie zdarzenie onreadystatechange 
+                zadanie.onreadystatechange = function () {
+                    if (zadanie.readyState == 4) {
+                        var wynik = JSON.parse(zadanie.responseText);
+                        if (wynik.kontoIstniejeResult == true) {
+                            document.getElementById("status").innerHTML = "konto istnieje";
+                        }
+                        else {
+                            document.getElementById("status").innerHTML = "konto nie istnieje";
+                        }
+                    }
+                };
+                //4. wysłanie
+                zadanie.send();
+            }
+
+            var kHaslo = document.getElementById("haslo");
+            kHaslo.onkeyup = function () {
+                var haslo = $("#haslo").val();
+                var hasloO = {};
+                hasloO.nazwa = haslo;
+                var hasloJ = JSON.stringify(hasloO); //dane - JSON {"nazwa": "aaaa"}
+
+                $.ajax(
+                    {
+                        url: 'http://localhost:2742/Firma.svc/hasloSilne',
+                        type: 'POST',
+                        timeout: 5000,
+                        dataType: 'text',
+                        contentType: "application/json",
+                        data: hasloJ
+                    }).done(function (responseText) {
+                        var wynik = JSON.parse(responseText);
+                        if (wynik.hasloSilneResult == true) {
+                            document.getElementById("statusHaslo").innerHTML = "ok";
+                        }
+                        else {
+                            document.getElementById("status").innerHTML = "nie ok";
+                        }
+                    }).error(function (a,b,c) {
+                        alert(a.responseText + b + c);
+                    });
+            };
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="login"/>
+    <p id="status" style="display:inline"></p>
+    <br/>
+    <input type="text" id="haslo" />
+    <p id="statusHaslo" style="display:inline"></p>
+</body>
+</html>

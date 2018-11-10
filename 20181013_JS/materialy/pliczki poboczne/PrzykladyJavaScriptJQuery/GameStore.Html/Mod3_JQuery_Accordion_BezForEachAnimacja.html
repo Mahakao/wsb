@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.5.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p.dane").css("display", "none");
+
+            $("div.szkolenie > h1").click(function () {
+                $(this).next(".szkolenieInfo").slideToggle();
+            });
+
+            $("div.naglowek").click(function () {
+                $(this).next(".dane").slideToggle();
+            });
+        });
+    </script>
+    <style>
+        .szkolenie {
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            margin: auto auto;
+            padding: 0px;
+            width: 700px;
+            height: 100%;
+        }
+        
+        .szkolenieInfo, h1, .naglowek {
+            margin:0px;
+            padding: 0px;
+        }
+        h1 {
+            background-color:navy; 
+            color:white;
+            text-align: center;
+            text-shadow: 2px 2px turquoise;
+        }
+        .dane {
+            clear: both;
+            font-family: verdana;
+            font-size: 12px;
+            line-height: 200%;
+            padding: 0px 0px 20px 50px;
+        }
+
+        .naglowek {
+            font-family: verdana;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="szkolenie">
+        <h1>MS10264</h1>
+        <div class="szkolenieInfo">
+            <div class="naglowek">Ogólne</div>
+            <p class="dane">
+                Szkolenie koncentruje się na zagadnieniach struktury programów C#, składni języka i programowaniu detali z .NET Framework 4.0. Szkolenie pokazuje również  nowe ulepszenia w języku C# 4.0 przy użyciu programu Visual Studio 2010. 
+            </p>
+            <div class="naglowek">Szczegóły</div>
+            <p class="dane">
+                Wprowadzenie zagadnień projektowania aplikacji Microsoft Web
+            Projektowanie aplikacji Microsoft Web
+            Projektowanie modeli MVC
+            Projektowanie MVC Controllers
+            Projektowanie widoków MVC
+            Projektowanie dla wykrywalności
+            Programowanie kodu Server-Side  dla formularzy Web
+            Optymalizowanie zarządzania danymi dla formularzy Web
+            Zapewnianie jakości przez debugowanie, testowanie jednostek i refactoring
+            Zabezpieczanie aplikacji Web
+            Zastosowanie Master Pages i CSS
+            Programowanie skryptów i usług Client Side
+            Programowanie zaawansowanych aplikacji WEb z uzyciem technologii AJAX
+            Wdrażanie aplikacji Web
+            Dodawanie Silverlight do aplikacji Web 
+            </p>
+        </div>
+    </div>
+
+    <div class="szkolenie">
+        <h1>MS10266</h1>
+
+        <div class="szkolenieInfo">
+            <div class="naglowek">Program</div>
+            <p class="dane">
+                Wprowadzenie do C# i .NET Framework
+            Stosowanie konstrukcji programów C#
+            Deklarowanie i wywoływanie metod
+            Obsługa wyjątków
+            Odczytywanie i zapisywanie plików
+            Tworzenie nowych typów
+            Enkapsulowanie danych i metod
+            Dziedziczenie klas i wdrażanie interfejsów
+            Zarządzanie czasem życia obiektów i kontrolowanie zasobów
+            Enkapsulowanie danych i definiowanie operatorów przeładowań
+            Oddzielanie metod i obsługa zdarzeń
+            Stosowanie kolekcji i budowanietypów ogólnych
+            Budowanie i enumerowanie niestandardowych kolekcji klas
+            Stosowanie LINQ do wykonywania zapytań do danych
+            Integrowanie kodu C# z językami dynamicznymi i komponentami COM
+            </p>
+        </div>
+    </div>
+</body>
+</html>

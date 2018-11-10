@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elementy liniowe i blokowe</title>
+</head>
+<body>
+    <style>
+        #zwierzeta {
+            color: red;
+        }
+        #rosliny {
+            color: green;
+        }
+        #border-red, #border-green {
+            border-style: dashed;
+            border-width: 1px;
+            width: 150px;
+            display: inline-block;
+        }
+        #border-red {
+            border-color: red;
+        }
+        #border-green {
+            border-color: green;
+        }
+    </style>
+
+    <p>Poniżej znajdują się przykładowe listy <span id="zwierzeta"> Zwierząt</span> oraz <span id="rosliny"> Roślin</span></p>
+    <div id="border-red">
+        <p>Lista zwierząt:</p>
+            <ul>
+                <li>Kot</li>
+                <li>Pies</li>
+                <li>Królik</li>
+            </ul>
+    </div>
+    <div id="border-green">
+        <p>Lista roślin:</p>
+            <ul>
+                <li>Jabłoń</li>
+                <li>Grusza</li>
+                <li>Śliwa</li>
+
+            </ul>
+    </p>
+</body>
+</html>

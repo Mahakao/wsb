@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>zad 1</title>
+
+    <script>
+        "use strict";
+        var A = 5;
+        
+        var B = new Number(5);
+        
+        function test() {
+            var fruits = ["Banana", "Orange", "Apple", "Mango"];
+            fruits[10] = "Lemon";
+            alert(fruits.join(";-"));
+            Math.random() * 48 + 1;  // 1...49
+        }
+
+        test();
+        
+        function walidacjaWiek(e) {
+            if (isNaN(String.fromCharCode(e.keyCode))
+               && (e.keyCode != 8 && e.keyCode != 46)
+                              || e.keyCode == 32) {
+                document.getElementById("pWynik").innerHTML = "podano nie liczbę";
+                e.preventDefault();
+            }
+            else {
+                document.getElementById("pWynik").innerHTML = "";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <section>
+        <article>
+            <input type="text" id="tWiek" onkeydown="walidacja(event)" />
+            <p style="font-weight:bold" id="pWynik" />
+        </article>
+        <aside></aside>
+    </section>
+    <footer style="width:100%;height:50px;background-color:blue;"></footer>
+</body>
+</html>
+<!--CRTL + SPACJA - wymuszenie podpowiedzi-->
+<!--CTRL + K + C - komentarz-->
+<!--CTRL + K + U - usunięcie komentarza-->

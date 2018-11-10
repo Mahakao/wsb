@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.5.1.js"></script>
+    <style type="text/css">
+        #harmonogram.li {
+            
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#harmonogram > li").mouseover(function () {
+                $(this).css("font-size", $(this).css("font-size").replace("px", "") * 2);
+            });
+            $("#harmonogram > li").mouseout(function () {
+                $(this).css("font-size", $(this).css("font-size").replace("px", "") / 2);
+            });
+        }
+ );
+    </script>
+    
+
+</head>
+<body>
+    <ul id="harmonogram">
+        <li>Registration</li>
+        <li>Moving the Web forward with HTML5</li>
+        <li>Diving in at the deep end with Canvas</li>
+        <li>New Technologies in Enterprise</li>
+        <li>WebSockets and You</li>
+        <li>Coffee and Cake Break</li>
+        <li>Building Responsive UIs</li>
+        <li>Fun with Forms (no, really!)</li>
+        <li>A Fresh Look at Layouts</li>
+        <li>Real-world Applications of HTML5 APIs</li>
+        <li>Lunch</li>
+        <li>Getting to Grips with JavaScript</li>
+        <li>Transforms and Animations</li>
+        <li>Web Design Adventures with CSS3</li>
+        <li>Introducing Data Access and Caching</li>
+        <li>Closing Thanks and Prizes</li>
+    </ul>
+</body>
+</html>

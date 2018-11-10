@@ -1,0 +1,17 @@
+C:\Program Files\Microsoft Learning\10953\Allfiles\Mod01\Labfiles\Starter\GameStore.Html\bin\GameStore.Html.dll
+C:\Program Files\Microsoft Learning\10953\Allfiles\Mod01\Labfiles\Starter\GameStore.Html\bin\GameStore.Html.pdb
+C:\Program Files\Microsoft Learning\10953\Allfiles\Mod01\Labfiles\Starter\GameStore.Html\obj\Debug\GameStore.Html.csprojResolveAssemblyReference.cache
+C:\Program Files\Microsoft Learning\10953\Allfiles\Mod01\Labfiles\Starter\GameStore.Html\obj\Debug\GameStore.Html.dll
+C:\Program Files\Microsoft Learning\10953\Allfiles\Mod01\Labfiles\Starter\GameStore.Html\obj\Debug\GameStore.Html.pdb
+D:\szkolenia\4.0\10953_HTML5\dodatkowe\PrzykladyRozne\GameStore.Html\bin\GameStore.Html.dll
+D:\szkolenia\4.0\10953_HTML5\dodatkowe\PrzykladyRozne\GameStore.Html\bin\GameStore.Html.pdb
+D:\szkolenia\4.0\10953_HTML5\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.csprojResolveAssemblyReference.cache
+D:\szkolenia\4.0\10953_HTML5\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.dll
+D:\szkolenia\4.0\10953_HTML5\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.pdb
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\bin\GameStore.Html.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\bin\GameStore.Html.pdb
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.csprojResolveAssemblyReference.cache
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\obj\Debug\GameStore.Html.pdb
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\bin\EntityFramework.dll
+E:\szkolenia\4.5\20480_HTML5_JavaScript_CSS3\dodatkowe\PrzykladyRozne\GameStore.Html\bin\EntityFramework.xml
