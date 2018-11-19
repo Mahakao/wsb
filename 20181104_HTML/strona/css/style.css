@@ -1,0 +1,121 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    color: #3b3b3b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #fff;
+}
+
+#container {
+    width: 968px;
+    background-color: #fff;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: hidden;
+}
+
+#main_image {
+    background-image: url("../img/main.jpg");
+    background-repeat: no-repeat;
+    width: 968px;
+    height: 376px;
+    position: relative;
+}
+
+#main_text {
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    bottom: 60px;
+    right: 60px;
+    margin: 0px;
+    padding: 10px;
+    opacity: 0.85;
+    border-radius: 20px;
+}
+
+#main_text h2 {
+    color: deepskyblue;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+    padding-bottom: 10px; 
+}
+
+#main_text h3 {
+    margin: 0px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#main_text p {
+    line-height: 1.2em;
+    margin: 0px;
+    text-align: justify;
+}
+
+#left_column, #center_column, #right_column {
+    width: 316px;
+    float: left;
+    margin: 10px 0px;
+}
+
+#left_column p, #center_column p, #right_column p {
+    margin: 2px 0px; 
+}
+
+#left_column h3, #center_column h3, #right_column h3 {
+    font-size: 24px;
+}
+
+#center_column {
+    padding: 0px 10px;
+}
+
+h1 {
+    font-family: "Sarina";
+    font-size: 96px;
+    margin: 0px;
+    float: left;
+    padding-right: 20px;
+}
+
+#header {
+    background-color: #000;
+    color: #fff;
+    height: 100px;
+    position: relative;
+}
+
+#header p {
+    font-size: 30px;
+    font-variant: small-caps;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 10px;
+}
+
+#header a {
+    font-size: 20px;
+    font-variant: small-caps;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    width: 100px;
+}
+
+#header ul {
+    list-style-type: none;
+    margin: 0px;
+    /* zakotwiczanie w prawym dolnym narożniku (ale relatywnie do nadrzędnego do niego headera) */
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#header li {
+    float: left;
+}
