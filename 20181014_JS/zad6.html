@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        window.onload = function() {
+
+            var btnCheck = document.getElementById("btn");
+            var number = document.getElementById("nNum");
+            btnCheck.onclick = function() {
+                
+                var number = document.getElementById("nNum").value;
+                var start = new Date(); //typ obiektowy (zlozony)
+
+                if (number == 0) {
+                    document.getElementById("pResult").innerHTML = number + " is just zero";
+                } else if (number % 2 == 0 && number != 2) {
+                    document.getElementById("pResult").innerHTML = number + " is not prime number";
+                } else { 
+                    //wykluczymy: 0, parzyste, 2, 1 (nie wejdzie do petli)
+                    //sprawdzamy tylko nieparzyste (i+=2, bo co druga jest nieparzysta)
+                    document.getElementById("pResult").innerHTML = number + " is prime number";
+                    var numberSqrt = Math.sqrt(number);
+                    for (i = 2; i <= numberSqrt; i+=2){
+                        if (number % i == 0) {
+                            document.getElementById("pResult").innerHTML = number + " is not prime number";
+                            break;
+                        }
+                    }
+                }
+                //I. 1746860020068407 -> ok. 585136356 (ok 46 lat) <- 14 s * 42795454
+                //II. 41795454 (sqrt) -> 14s
+                //III. sqrt liczone raz -> 7.7s
+                //IV. 20897727 (tylko nieparzyste) -> 
+                var end = new Date();
+                var timeSpan = end - start;
+                alert((timeSpan/1000)+ " sekund");
+            };
+        };
+    </script>
+
+</head>
+<body>
+    
+    <input id="nNum" type="number" placeholder="number"/>
+    <input id="btn" type="button" value="check if prime"/>
+    <p id="pResult"></p>
+
+
+</body>
+</html>

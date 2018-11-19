@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script>
+        window.onload = function() 
+        {
+            
+            var btnCheck = document.getElementById("btn");
+            var number1 = document.getElementById("nNumberOne");
+            var number2 = document.getElementById("nNumberTwo");
+
+            btnCheck.onclick = function()
+            {
+                
+                var number1 = document.getElementById("nNumberOne").value;
+                var number2 = document.getElementById("nNumberTwo").value;
+                
+                var lMniejsza;
+                if (number1 < number2) {
+                    lMniejsza = number1;
+                } else {
+                    lMniejsza = number2;
+                }
+                
+                for (i = lMniejsza; i = 1; i--) {
+
+                    if (number1 % lMniejsza == 0 && number2 % lMniejsza == 0) {
+                        document.getElementById("pResult").innerHTML = "NWD to " + lMniejsza;
+                        break;
+
+                    }
+                }
+
+            };
+        };
+
+    </script>
+
+</head>
+<body>
+    <input id="nNumberOne" type="number" placeholder="number1"/>
+    <input id="nNumberTwo" type="number" placeholder="number2"/>
+    <input id="btn" type="button" value="NWD"/>
+    <p id="pResult"></p>
+</body>
+</html>

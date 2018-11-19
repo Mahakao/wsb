@@ -1,0 +1,52 @@
+<head>
+<meta http-equiv="content-type" content="text/html; charset="utf-8"/>
+<title>Scalanie wierszy i komórek w tabelach HTML - Tabela Pracownicy</title>
+<link type="text/css" href="style.css" rel="stylesheet">
+</head>
+<body>
+<table id="tb1">
+	<tr class="employee_header">
+		<td>Pracownik:</td> <td>Zarobki:</td> <td>Funkcja:</td> <td>Data zatrudnienia:</td>
+	</tr>
+	<tr class="employee">
+		<td>Anna Nowak</td> <td>2000</td> <td>Sekretarka</td> <td>2005-05-11</td>
+	</tr>
+	<tr class="employee">
+		<td>Jan Kowalski</td> <td>3000</td> <td>Grafik</td> <td>2001-01-01</td>
+	</tr>
+	<!-- Pracownik Marek Markowski -->
+	<tr class="employee"> 
+        <td rowspan="2">Marek Markowski</td> <td rowspan="2">4000</td> <td>Informatyk</td> <td rowspan="2">1997-08-23</td>
+	</tr>
+	<!-- /Pracownik Marek Markowski -->
+	<!-- Dodatkowa Funkcja -->
+	<tr class="employee">
+		<td>Grafik</td>
+	</tr>
+	<!-- /Dodatkowa Funkcja -->
+	<!-- Kadra Mened¿erska Nag³ówek -->
+	<tr class="employee_header">
+		<td colspan="4">Kadra mened¿erska:</td>
+	</tr>
+	<!-- /Kadra Mened¿erska Nag³ówek -->
+        <tr class="employee">
+		<td>Andrzej Buc</td>
+		<td>4300</td>
+                <td>Dyrektor operacyjny</td>
+		<td>2002-01-22</td>
+	</tr>
+	<tr class="employee">
+		<td>Malwina Ma³omówna</td>
+		<td>5100</td>
+                <td>Wiceprezes</td>
+		<td>2009-09-01</td>
+	</tr>
+	<tr class="employee">
+		<td>Marian Podyma</td>
+		<td>10000</td>
+                <td>Prezes</td>
+		<td>1990-01-01</td>
+	</tr>
+</table>
+</body>
+</html>

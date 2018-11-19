@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Odnośniki cd</title>
+
+    <style>
+        #zabawa {
+            text-decoration: none;
+            width: 200px;
+            height: 100px;
+            display: block;
+        }
+
+        #zabawa:link {
+            background-image: url("link.jpg");
+        }
+        #zabawa:hover {
+            background-image: url("hover.jpg");
+        }
+        #zabawa:active {
+            background-image: url("active.jpg");
+        }
+        #zabawa:visited {
+            background-image: url("visited.jpg");
+        }
+
+    </style>
+
+</head>
+<body>
+    <a href="http://wp.pl" target="_blank">
+        <img src="materialy/obrazek.jpg" alt="Mapa kwadratów" usemap="#mapa">
+    </a>    
+    <map name="mapa">
+        <area shape="rect" coords="0,0,78,78" href="http://onet.pl" alt="Red square">
+        <area shape="rect" coords="78,0,156,78" href="http://google.pl" alt="Blue square">
+        <area shape="rect" coords="78,78,156,156" href="http://interia.pl" alt="Yellow square">
+    </map>
+    <br>
+    <a href="http://trojmiasto.pl" id="zabawa"></a>
+
+</body>
+</html>
