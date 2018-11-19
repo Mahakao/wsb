@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <fieldset>
+            <legend>Dane osobowe</legend>
+            <label for="name">Imię:</label>
+            <input type="text" name="name" id="name"> <br>
+            
+            <label for="surname"> Nazwisko:</label> 
+            <input type="text" name="surname" id="surname"> <br>
+
+            Gender: <br>
+            <label for="f">Kobieta:</label>
+            <input type="radio" name="gender" value="female" id="f"><br>
+
+            <label for="m">Mężczyzna:</label>
+            <input type="radio" name="gender" value="male" id="m"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Twoje pytanie:</legend>
+            <label for="a">Adresat:</label>
+            <select name="adresat" id="a">
+                <optgroup label="Sział sprzedaży">
+                    <option>Jan Kowalski</option>
+                    <option>Jan Nowak</option>
+                </optgroup>
+                <optgroup label="Serwis">
+                    <option>Anna Nowak</option>
+                </optgroup>
+            </select> <br>
+
+            <textarea name="opinion" cols="40" rows="5"></textarea> <br>
+        </fieldset>
+    </form>
+
+</body>
+</html>

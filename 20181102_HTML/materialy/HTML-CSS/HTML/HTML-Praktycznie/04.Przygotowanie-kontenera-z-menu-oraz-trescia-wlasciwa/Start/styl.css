@@ -1,0 +1,43 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: Black;  
+    font-family: Arial, Verdana, Tahoma, Sans-Serif;
+    font-size: 12px;
+}
+body
+{
+    background: #00041B url('kola.png') no-repeat right top;
+}
+#wysrodkowany
+{
+    margin: 0px auto; /* wysrodkowanie diva */
+    width: 980px; /* ustawienie sztywnej szerokości */
+}
+    #naglowek
+    {
+        margin-top: 15px; /* margines górny */
+        margin-bottom: 15px; /* margines dolny */
+        background: white; /* ustawienie koloru tła */
+        min-height: 200px; /* minimalna wysokość kontenera */
+        width: 100%; /* szerokość 100% dziedziczona po nadrzędnym */
+	    opacity: 0.8; /* przeźroczystość */
+    }
+    #naglowek_gora
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna */
+        }
+    #naglowek_srodek
+        {
+            height: 140px; /* wysokość logotypu */
+            margin-top: 40px; /* położenie od szczytu kontenera nagłówek */
+        }
+        #naglowek_dol
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna *
+        }

@@ -1,0 +1,224 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: Black;  
+    font-family: Arial, Verdana, Tahoma, Sans-Serif;
+    font-size: 12px;
+}
+body
+{
+    background: #00041B url('kola.png') no-repeat right top;
+}
+#wysrodkowany
+{
+    margin: 0px auto; /* wysrodkowanie diva */
+    width: 980px; /* ustawienie sztywnej szerokości */
+}
+    #naglowek
+    {
+        margin-top: 15px; /* margines górny */
+        margin-bottom: 15px; /* margines dolny */
+        background: white; /* ustawienie koloru tła */
+        min-height: 200px; /* minimalna wysokość kontenera */
+        width: 100%; /* szerokość 100% dziedziczona po nadrzędnym */
+	    opacity: 0.8; /* przeźroczystość */
+    }
+    #naglowek_gora
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna */
+        }      
+  	         #naglowek_gora_menu
+            {
+                position: absolute;  /* pozycja obbiektu*/
+                top: 0px;   /* odległość od góry */
+                right: 40px;  /* odległość od prawej */
+            }
+                    #naglowek_gora_menu ul li
+                    {
+                        display: inline; /* sposób wyświetlania obiektu */
+                        color: Blue; /* kolor czcionki */
+                    }
+                    #naglowek_gora_menu ul a
+                    {
+                        display: inline-block; /* sposób wyświetlania obiektu */
+                        background: #00041B; /* kolor tła */
+                        color: Aqua; /* kolor czcionki */
+                        padding: 5px 40px 5px 40px; /* oddalenie */
+                        border-radius: 0px 0px 10px 10px; /* zaokrąglenie obramowania(CSS3) */
+                    }
+                    #naglowek_gora_menu a:hover
+                    {
+                        background-color: Aqua; /* kolor tła */
+                        height: 25px;  /* wysokość obiektu */
+                        color: Black; /* kolor czcionki */
+                    }
+    #naglowek_srodek
+        {
+            height: 140px; /* wysokość logotypu */
+            margin-top: 40px; /* położenie od szczytu kontenera nagłówek */
+        }
+            #microsoft
+            {
+                padding-top: 20px; /* odstęp od góry */
+                font-size: 17px; /* Rozmiar czcionki */
+                margin-left: 90px; /* margines lewy */
+            }
+            #wak
+            {
+                font-size: 50px; /* Rozmiar czcionki */
+                margin-left: 120px; /* margines lewy */
+                
+                font-family: "Gill Sans Ultra Bold Condensed"; /* krój czcionki */
+            }
+            #podtytul
+            {
+                font-size: 17px; /* Rozmiar czcionki */
+                margin-left: 600px; /* margines lewy */
+            }
+        #naglowek_dol
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna */
+  	    }
+  	     #naglowek_dol_menu
+            {
+                position: absolute;  /* pozycja obbiektu*/
+                bottom: 0px;   /* oddalenie od dołu */
+                left: 40px; /* oddalenie od lewej */
+            }
+                    #naglowek_dol_menu ul li
+                    {
+                        display: inline; /* wyświetlanie obiektu */
+                        
+                    }
+                    #naglowek_dol_menu ul a
+                    {
+                        display: inline-block; /* wyświetlanie obiektu */
+                        background: #00041B; /* kolor tła */
+                        color: Aqua; /* kolor czcionki */
+                        padding: 5px 40px 5px 40px; /* odstęp */
+                        border-radius: 10px 10px 0px 0px;  /* zaokrglenie obramowania(CSS3) */             
+                    }
+                    #naglowek_dol_menu ul a:hover
+                    {
+                        background-color: Aqua; /* kolor tła */
+                        color: Black; /* kolor czcionki */
+                    }
+    #zawartosc_wlasciwa
+    {
+        background: white; /* ustawienie koloru tła */
+        min-height: 600px; /* minimalna wysokość kontenera */
+        width: 100%; /* szerokość 100% kontenera nadrzędnego */
+        padding-top: 30px; /* odstęp od krawędzi górnej kontenera */
+        padding-bottom:30px; /* odstęp od krawędzi dolnej  kontenera*/
+    }
+            #menu_lewe ul
+            {
+                list-style: none; /* Styl listy */
+                color: black; /* kolor tekstu */
+                display: block;   /* styl wyświetlani elementu */
+            }
+            .bold
+            {
+                font-weight:bold; /* pogróbienie czcionki */
+            }
+            #menu_lewe ul li
+            {
+                padding-left: 10px; /* odstęp od lewej */
+                margin-top: 10px; /* margines od góry */
+                border-left: 2px solid #00041B; /* obramowanie(rozmiar, styl linii, kolor) */
+                font-size: medium; /* średni rozmiar czcionki */
+            }    
+            #menu_lewe ul li:hover
+            {
+                border-left: 2px solid orange; /* obramowanie(rozmiar, styl linii, kolor) */
+                margin-left: 20px; /* margines od lewej */
+            }
+            #menu_lewe p
+            {
+                margin-top: 30px;  /* margines od góry */
+            }
+            #menu_lewe a
+            {
+                color: black; /* kolor tekstu */
+            }
+            #menu_lewe a:hover
+            {
+                color: Navy; /* kolor tekstu */
+            }
+            #glowna_tresc h1
+            {
+                font-size: 20px; /* Rozmiar czcionki */
+                margin-bottom: 10px; /* margines od dołu */
+            }
+            #glowna_tresc p
+            {
+                font-size: 14px; /* Rozmiar czcionki */
+                margin-bottom: 10px; /* margines od dołu */
+                text-align: justify; /* justowanie tekstu */
+            }
+    #menu_lewe
+        {
+            width: 200px; /* szerokość menu */
+            min-height: 600px; /* minimalna wysokość */
+            float:left; /* oblewanie element */
+            margin-left: 20px; /* odstęp kontenera od lewej krawędzi kontenera nadżędnego */
+        }
+    #glowna_tresc
+        {
+            margin-left: 240px; /* margines od lewego marginesu */
+            margin-right: 20px; /* margines od prawej */
+            min-height: 800px; /* wysokość minimalna */
+        }
+    #stopka
+    {
+        margin-top: 15px; /* odstęp od poprzedniego kontenera */
+        margin-bottom: 15px; /* odstęp pomiędzy dolną krawędzią przeglądarki */
+        width: 100%; /* szerokość 100% */
+        color: White; /* kolor tekstu */
+        text-align: right; /* wyrównanie tekstu w kontenerze do prawej */
+    }
+        #stopka p /*paragraf */
+        {
+            font-weight: bold; /* pogróbienie tekstu */
+            color: White; /* kolor tekstu */
+        }
+        #stopka ul li /* elementy listy nieuporządkowanej */
+        {
+            color: White; /* kolor tekstu */
+            display: inline-block; /* wyświetlanie w linie w postaci blokowej */
+            border-left: 2px solid white; /* obramowanie ramki elementu z lewej */ 
+            padding-left: 5px; /* odstęp wewnątrz elementu z lewej */
+            margin-left: 10px; /* odstęp pomiędzy elementami z lewej */
+            margin-top: 10px; /* odstęp elementów od góry*/  
+        }
+/* DODANE */
+/* wykonczenie */
+.zaokraglenie_2_gornych_rogow
+{
+    border-radius: 10px 0px 10px 0px; /* zaokrąglenie 2 gornych rogów o krzywiznę 10px, wlasciwosc dostępna w CSS3 */
+}
+.zaokraglenie_z_kazdej_strony
+{    
+    border-radius: 10px; /* zaokrąglenie wszystkich rogów o krzywiznę 10px, wlasciwosc dostępna w CSS3 */
+} 
+/* koniec: wykonczenie */
+.czyszczenie_lini
+{
+    clear: both; /* CZYSZCZENIE LINI */
+}   
+/* KONIEC DODANE */
+/* DODANE */
+a
+{
+    color: White;
+}
+a:hover
+{
+    color: Green;
+}
+/* KONIEC DODANE */

@@ -1,0 +1,67 @@
+body
+{
+  font-family: tahoma, helvetica, arial, sans-serif;
+  font-size: 10px;
+}
+hr
+{
+  width: 90%;
+  height: 1px;
+  text-align: left;
+  background-color: #000000;  
+  border-width: 0;
+}
+h1
+{
+  font-size: 16px;
+}
+.body_margin
+{
+  margin: 0 10px 0 10px;
+  padding: 0;
+}
+#tb1
+{
+  border-collapse: collapse;
+  border: 1px #000000 solid;
+  width: 800px;
+  margin-left:auto;
+  margin-right:auto;
+}
+#tb1 td
+{
+  border: 1px #000000 solid;
+}
+#tb1 #header
+{
+  vertical-align: middle;
+  width: 800px;
+  height: 80px;
+}
+#tb1 #menu
+{
+  vertical-align: top;
+  width: 200px;
+}
+#tb1 #adv
+{
+  text-align: center;
+  vertical-align: top;
+  width: 200px;
+}
+#tb1 #main
+{
+  vertical-align: top;
+  width: 400px;
+}
+#tb1 #footer
+{
+  vertical-align: middle;
+  text-align: center;
+  width: 800px;
+  height: 40px;
+}
+.marg
+{
+  margin: 10px 10px
+}

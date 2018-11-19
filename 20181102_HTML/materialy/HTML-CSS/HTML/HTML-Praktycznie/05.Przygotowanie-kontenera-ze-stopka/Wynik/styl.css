@@ -1,0 +1,89 @@
+﻿*
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    text-decoration: none;
+    color: Black;  
+    font-family: Arial, Verdana, Tahoma, Sans-Serif;
+    font-size: 12px;
+}
+body
+{
+    background: #00041B url('kola.png') no-repeat right top;
+}
+#wysrodkowany
+{
+    margin: 0px auto; /* wysrodkowanie diva */
+    width: 980px; /* ustawienie sztywnej szerokości */
+}
+    #naglowek
+    {
+        margin-top: 15px; /* margines górny */
+        margin-bottom: 15px; /* margines dolny */
+        background: white; /* ustawienie koloru tła */
+        min-height: 200px; /* minimalna wysokość kontenera */
+        width: 100%; /* szerokość 100% dziedziczona po nadrzędnym */
+	    opacity: 0.8; /* przeźroczystość */
+    }
+    #naglowek_gora
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna */
+        }
+    #naglowek_srodek
+        {
+            height: 140px; /* wysokość logotypu */
+            margin-top: 40px; /* położenie od szczytu kontenera nagłówek */
+        }
+        #naglowek_dol
+        {
+            height: 20px; /* wysokość kontenera */
+            position: relative; /* pozycja relatywna */
+        }
+    #zawartosc_wlasciwa
+    {
+        background: white; /* ustawienie koloru tła */
+        min-height: 600px; /* minimalna wysokość kontenera */
+        width: 100%; /* szerokość 100% kontenera nadrzędnego */
+        padding-top: 30px; /* odstęp od krawędzi górnej kontenera */
+        padding-bottom:30px; /* odstęp od krawędzi dolnej  kontenera*/
+    }
+    #menu_lewe
+        {
+            width: 200px; /* szerokość menu */
+            min-height: 600px; /* minimalna wysokość */
+            float:left; /* oblewanie element */
+            margin-left: 20px; /* odstęp kontenera od lewej krawędzi kontenera nadżędnego */
+
+        }
+    #glowna_tresc
+        {
+            margin-left: 240px; /* margines od lewego marginesu */
+            margin-right: 20px; /* margines od prawej */
+
+            min-height: 800px; /* wysokość minimalna */
+        }
+    #stopka
+    {
+        margin-top: 15px; /* odstęp od poprzedniego kontenera */
+        margin-bottom: 15px; /* odstęp pomiędzy dolną krawędzią przeglądarki */
+        width: 100%; /* szerokość 100% */
+        color: White; /* kolor tekstu */
+        text-align: right; /* wyrównanie tekstu w kontenerze do prawej */
+    }
+        #stopka p /*paragraf */
+        {
+            font-weight: bold; /* pogróbienie tekstu */
+            color: White; /* kolor tekstu */
+        }
+        #stopka ul li /* elementy listy nieuporządkowanej */
+        {
+            color: White; /* kolor tekstu */
+            display: inline-block; /* wyświetlanie w linie w postaci blokowej */
+            border-left: 2px solid white; /* obramowanie ramki elementu z lewej */ 
+            padding-left: 5px; /* odstęp wewnątrz elementu z lewej */
+            margin-left: 10px; /* odstęp pomiędzy elementami z lewej */
+            margin-top: 10px; /* odstęp elementów od góry*/ 
+           
+        }
