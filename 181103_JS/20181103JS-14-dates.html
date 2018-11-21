@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    window.onload = function() {
+        var actualDate = new Date();
+        var dBirthday = document.getElementById("dBirthday");
+        var pResult = document.getElementById("pResult");
+
+        dBirthday.onchange = function() {
+
+            //data na podstawie tekstu
+            // alert(new Date(this.value).getFullYear()); 
+
+         
+            //1. czy pelnoletni rocznikowo
+            if ((actualDate.getFullYear() - (new Date(dBirthday.value).getFullYear()) ) < 18) {
+                pResult.style.color = "red";
+                pResult.innerHTML = "rocznikowo nieletni";
+            
+            }
+            else {
+
+                pResult.style.color = "green";
+                pResult.innerHTML = "rocznikowo pełnoletni";
+            }
+
+        };
+
+
+        //2. czy pelnoletni calkowicie - setFullYear + 18 czy spr rok, miesiac, dzień
+        
+
+
+    };
+
+
+</script>
+
+    <input type="date" id="dBirthday"/>
+    <p id="pResult"></p>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+/*
+           window.onload = function() {
+                var pDescription = document.getElementById("pProductDescription").innerHTML;
+                // alert(pDescription.length)
+                // alert(pDescription.trim().toLowerCase().indexOf("internet"));
+                // alert(pDescription.replace("działających w środowisku Internet", "jako apikacje "));
+                /* alert(pDescription.substr(
+                    pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length,
+                    pDescription.length - pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length, 
+                    ));
+                    */
+                    
+                    /*
+                    alert(pDescription.substring(
+                    pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length,
+                    pDescription.length 
+                    ));
+
+                    "dla wszystkich osób, "
+
+                    "które chciałyby zostać programistą aplikacji webowych"
+                    */
+
+
+           window.onload = function() {
+                var tSearch = document.getElementById("tSearch"); //kontrolka search text
+                var pDescription = document.getElementById("pProductDescription"); //paragraf z opisem produktu
+                var pDescriptionOriginalText = document.getElementById("pProductDescription").innerHTML;
+
+                tSearch.onkeyup = function() { //po puszczeniu klawisza
+                    var tSearchText = this.value; // this -> aktualny element -> kontrolka tSearch
+                    
+                    
+                    pDescription.innerHTML = pDescriptionOriginalText.replace(new RegExp(tSearchText, 'g'),
+                                            '<span style="background-color: yellow;">' + tSearchText + '</span>');
+
+
+//https://stackoverflow.com/questions/1144783/how-to-replace-all-occurrences-of-a-string-in-javascript#
+                };
+
+           };
+        
+        </script>
+
+
+</head>
+<body>
+    <input type="text" id="tSearch" placeholder="Podaj tekst wyszukiwania"/>
+    <p id="pProductDescription">
+        Studia poświęcone są nauce programowania nowoczesnych serwisów internetowych oraz złożonych rozproszonych systemów informatycznych działających w środowisku Internet, wykorzystujących w warstwie prezentacji przeglądarkę internetową. Niniejsze studia podyplomowe stanowią podstawę, bądź uzupełnienie wcześniej zdobytych wiadomości o narzędzia wykorzystywane przy tworzeniu nowoczesnych serwisów internetowych. Dają one także możliwość aktualizacji wiedzy dla osób, które edukację informatyczną zakończyły kilka lat temu. Są przeznaczone nie tylko dla informatyków, ale dla wszystkich osób, które chciałyby zostać programistą aplikacji webowych
+    </p>
+
+</body>
+</html>

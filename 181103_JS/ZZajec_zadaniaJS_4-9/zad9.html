@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <script>
+
+        /* 
+        function NWD(number1, number2) {
+                    var lowerNumber; //undefined
+                    if (number1 < number2)
+                        lowerNumber = number1;
+                    else
+                        lowerNumber = number2;
+                    for (i = lowerNumber; i > 0; i--) {
+                        if(number1 % i == 0 && number2 % i == 0){
+                            // document.getElementById("pResult").innerHTML = "NWD: " + i.toString();
+                            // break;
+                            return i; 
+                        }
+                    }
+                };
+
+            window.onload = function(){
+                var btnCheck =  document.getElementById("btnCheck");
+                btnCheck.onclick = function(){
+                    var n1 = document.getElementById("nNumber1").value;
+                    var n2 = document.getElementById("nNumber2").value;
+                    // var nwd = NWD(n1,n2) == undefined ? "podaj poprawne liczby": NWD(n1,n2); //undefined lub 1~n //slaba opcja, bo dwa razy mieli funkcje
+                    var nwd = NWD(n1,n2);
+                    nwd = nwd == undefined ? "podaj poprawne liczby": nwd; //jesli nwd jest undefined, to podstaw nowa wartosc. jesli nie to nie mieniaj 
+                    document.getElementById("pResult").innerHTML = "NWD: " + nwd.toString();
+                    // other ver
+                    // document.getElementById("pResult").innerHTML = "NWD: " + NWD(n1,n2);
+
+                    
+                }
+        };  
+
+        */
+                
+
+            function nwdEuclides(number1, number2) {
+                while (number1 * number2 > 0) { // number1 > 0 && number2 > 0
+                    if (number1 > number2) {
+                        number1 %= number2// number1 = number1 % number2;
+                    }
+                    else {
+                        number2 %= number1 // number2 = number2 % number1;
+                        result = number2;
+                    }
+                    return number1 + number2
+                }
+            };
+              
+                window.onload = function(){
+                var btnCheck =  document.getElementById("btnCheck");
+                btnCheck.onclick = function(){
+                    var n1 = document.getElementById("nNumber1").value;
+                    var n2 = document.getElementById("nNumber2").value;
+                    var nwd = nwdEuclides(Number(n1), Number(n2));
+                    nwd = nwd == undefined ? "podaj poprawne liczby": nwd;
+                    document.getElementById("pResult").innerHTML = "NWD: " + nwd;
+                    
+                }
+        };  
+
+
+
+        </script>
+</head>
+
+<body>
+    <input id="nNumber1" type="number" placeholder="Podaj liczbę" />
+    <input id="nNumber2" type="number" placeholder="Podaj liczbę" />
+    <input id="btnCheck" type="button" value="NWD" />
+    <p id="pResult"></p>
+</body>
+
+</html>
