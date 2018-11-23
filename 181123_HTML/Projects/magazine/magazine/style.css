@@ -1,0 +1,73 @@
+body {
+background: linear-gradient(to bottom right, lemonchiffon, white);
+padding: 15px;
+font-family: Verdana;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    background: teal;
+    padding: 5px;
+}
+	
+.column1 {
+    width: 48%;
+    float: left;
+}
+
+.column2 {
+    width: 48%;
+    float: right;
+}
+
+img {
+    /* max 100% kolumny (w tym przypadku) */
+    max-width: 100%;
+}
+
+.photo {
+    /* text-shadow do tekstu, box-shadow do boxu */
+    /* peirwsza wartość to przesunięcie w prawo, druga dół, trzecia to blur */
+    box-shadow: 14px 10px 4px gray;
+    transform: rotate(10deg);
+}
+
+h2 {
+    color: white;
+    background-color: teal;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    box-shadow: 2px 2px 2px gray;
+    text-align: center;
+}
+
+.item{
+    padding: 10px;
+    margin-bottom: 10px;
+    border:  3px dashed teal
+}
+
+#sticker {
+    background: linear-gradient(green, yellow, orange, red, purple, blue);
+    padding: 40px;
+    color: white;
+    font-family: "Lucida sans";
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#greenrobot {
+    height: 100px;
+    position: absolute;
+    left: -200px;
+    animation: greenrobot 10s infinite;
+}
+
+@keyframes greenrobot {
+    0% {left: -200px;}
+    50% {left: 0px;}
+    100% {left: -100px;}
+}

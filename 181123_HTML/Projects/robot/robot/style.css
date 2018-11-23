@@ -1,0 +1,39 @@
+img {
+	width: 50px;
+}
+#face {
+	width: 400px;
+}
+#eyes1 {
+	width: 300px;
+	position: absolute;
+	left: 80px;
+	top: 150px;
+	z-index: 1;
+}
+#mouth3 {
+	width: 100px;
+	position: absolute;
+	left: 180px;
+	top: 280px;
+}
+#hair4 {
+	width: 350px;
+	position: absolute;
+	left: 28px;
+	top: 30px;
+}
+#sunglasses {
+	width: 400px;
+	position: absolute;
+	left: 50px;
+	top: 130px;
+	z-index: 2;
+}
+#ears2 {
+	width: 450px;
+	position: absolute;
+	left: -15px;
+	top: 150px;
+	z-index: 0;
+}

@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+}
+
+html {
+  /* wszystko, co jest poza ekranem, to jest schowane */
+  overflow: hidden; 
+}
+
+#sky {  
+  /* bedzie u gory */
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  background: lightblue;
+  animation: sky 10s;
+}
+
+#sea {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  /* dokujemy go na dole mimo absoluta */
+  bottom: 0;
+  background: blue;
+}
+
+#sun {
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  /* animacja sunrise trwa 10s */
+  animation: sunrise 10s infinite;
+}
+
+@keyframes sunrise {
+  /* 0% == 0% CZASU */
+  0% {top: 90%; left: 0;}
+  33% {top:0; left: 40%;}
+  66% {top: 0; left: 40%;}
+  100% {top: 90%; left: 80%;}
+}
+
+@keyframes sky {
+  0% {background: black;}
+  50% {background: lightblue;}
+  75% {background: lightblue;}
+  100% {background: black;}
+}
+#helicopter {
+  height: 100px;
+  position: absolute;
+  right: 0;
+  top: 250px;
+  animation: fly 8s infinite;
+}
+
+@keyframes fly {
+  0% {right: 0;}
+  100% {right: 100%;}
+}
+
+#cloud {
+  height: 300px;
+  animation: cloud 10s infinite;
+}
+
+@keyframes cloud {
+  0% {visibility: hidden;}
+  10% {visibility: visible;}
+  30% {visibility: hidden;}
+  100% {visibility: hidden;}
+}
+
+#boat {
+  height: 100px;
+  position: absolute;
+  bottom: 260px;
+  left: 0;
+  animation: go 30s infinite;
+}
+
+@keyframes go {
+  0% {left: 0;}
+  100% {left: 100%;}
+}
