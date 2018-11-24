@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <script>
+    //jak zmienimy localStorage na sessionStorage, to sie bedzie wymazywac przy zamknieciu przegladarki. Better than localStorage, jak userami sie poslugujesz
+      if(localStorage) {
+          $(document).ready(function(){
+            // znacznika szukam
+            $("h1").text("Welcome, " + localStorage.getItem("name") + "!");
+
+            //onclick event
+            $("#save").click(function(){
+                //create variable (find and get #name from input field)
+                var name = $("#name").val();
+                // save in localStorage
+                localStorage.setItem("name",name);
+                alert("Your name has been saved, " + name + "!");
+            });
+            $("#get").click(function(){
+                alert("Hello, " + localStorage.getItem("name"));
+            });
+          });
+      } else {
+          alert("Sorry, your web browser doesn't support local storage");
+      }
+  </script>
+
+</head>
+<body>
+  <h1></h1>
+    <form>
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name">
+      <button id="save">Save name</button>
+      <button id="get">Get name</button>
+  </form>  
+  <div id="txt"></div>
+
+</body>
+</html>

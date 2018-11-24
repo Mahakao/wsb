@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Geolocalisation</title>
+    <script>
+        function display() {
+            if(navigator.geolocation) {
+                // coordinates samo w sobie jest obiektem
+                navigator.geolocation.getCurrentPosition(function(coordinates){
+                    var message = "Your current coordinates: " + coordinates.coords.latitude + "° " +
+                    coordinates.coords.longitude + "°";
+                    document.getElementById("myCoords").innerHTML = message;
+                });
+            } else {
+                alert("Geolocalisation doesn't work :(");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- coordinates here -->
+    <div id="myCoords"></div>
+    <button onclick="display();">Display my coordinates</button>
+
+</body>
+</html>

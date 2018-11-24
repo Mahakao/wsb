@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Map</title>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyCvARVjpVWrzqKSvuTrWWcriM7t65STRxw"></script>
+    
+    <script>
+        function loadMap() {
+            // creating map with map centered in coordinated
+            var coordinates = new google.maps.LatLng(54.410509, 18.563295);
+            // creating map options
+            var mapOptions = {
+                // max zoom is 21
+                zoom: 10,
+                center: coordinates,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var mapa = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+</head>
+<body onload="loadMap();">
+    <!-- map here -->
+    <div id="map" style="width: 700px; height: 500px; border: 1px solid black; background: pink"></div>
+</body>
+</html>

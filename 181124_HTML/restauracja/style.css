@@ -1,0 +1,85 @@
+body {
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#up {
+    /* wysokosc jak wys ekranu */
+    height: 100vh;
+    background-image: url(heroimage.jpg);
+    /* mozna inline zrobic no-repeat w background (nie background-image)*/
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#up-text {
+    width: 50%;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: white;
+}
+
+#up-text h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+#up-text p {
+    text-align: left;
+}
+
+#up-text input {
+    width: 80%;
+    padding: .6em;
+    border-radius: 2em;
+    border: none;
+    /* po kliknieciu brzydki kwadrat zaznaczenia byl */
+    outline: none;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#up-text button {
+    border-radius: 5px;
+    background-color: rgb(71, 190, 161);
+    padding: 5px;
+    color: white;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+}
+
+#down {
+    width: 100%;
+    position: relative;
+    /* padding: 20px; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: .3em;
+}
+
+.box {
+    width: 32%;
+    float: left;
+    margin-left: .2em;
+}
+
+.box img {
+    width: 100%;
+}
+
+.box :first-of-type {
+    margin: 0;
+}
+
+@media screen and (max-width: 700px) {
+    .box {
+        /* zdejmujemy floatowanie */
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
