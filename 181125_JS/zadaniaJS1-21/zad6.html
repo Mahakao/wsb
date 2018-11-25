@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <script>
+        window.onload = function(){
+                var btnCheck =  document.getElementById("btnCheck");
+                btnCheck.onclick = function(){
+                    var number = document.getElementById("nNumber").value;
+                    var start = new Date(); //typ obiektowy
+                    if(number == 0){
+                        document.getElementById("pResult").innerHTML = 
+                        number + " jest nie liczbą pierwszą ani złożoną";
+                    } 
+                    else if(number % 2 == 0 && number != 2){
+                        document.getElementById("pResult").innerHTML = 
+                                number + " nie jest liczbą pierwszą";
+                    } 
+                    else{ //1, 2, nieparzysta
+                        document.getElementById("pResult").innerHTML = 
+                                number + " jest liczbą pierwszą";      
+                        var numberSqrt = Math.sqrt(number);            
+                        for(var i = 3; i <= numberSqrt; i+=2){ //  3,5,7
+                            if(number % i == 0){ //10  %  2  ==  0 
+                                document.getElementById("pResult").innerHTML = 
+                                number + " nie jest liczbą pierwszą";
+                                break;
+                            }
+                        }    
+                    }
+                    //I. 1746860020068407
+                    //II. 41795454 (sqrt) -> 14 s.
+                    //III. Sqrt liczone raz -> 7.7 s.
+                    //IV. 20897727 (tylko nieparzyste) - 3.6 s.
+
+                    var end = new Date();
+                    var timeSpan = end - start;
+                    alert((timeSpan / 1000) + " sekund");   
+                    //console.log(timeSpan);
+                };
+        };    
+        </script>
+</head>
+
+<body>
+    <input id="nNumber" type="number" placeholder="Podaj liczbę" value="1746860020068409" />
+    <input id="btnCheck" type="button" value="Sprawdź czy liczba pierwsza" />
+    <p id="pResult"></p>
+</body>
+
+</html>

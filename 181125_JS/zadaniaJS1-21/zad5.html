@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        window.onload = function(){ //zdarzenie jak załadowana strona
+                var btnCheck =  document.getElementById("btnCheck");
+                btnCheck.onclick = function(){
+                    var number = document.getElementById("nNumber").value;
+                    var result = 1;
+
+                    for(var i = 2; i <= number; i++ ){ //number + 1; ) //   2..4    i < 5 
+                        result *= i;    //result = result * i;
+                    }
+                    
+                    document.getElementById("pResult").innerHTML = 
+                            "Factorial for " + number + " is " + result;
+                };
+           };    
+        </script>
+</head>
+
+<body>
+    <input id="nNumber" type="number" placeholder="Enter number" />
+    <input id="btnCheck" type="button" value="Calculate factorial" />
+    <p id="pResult"></p>
+</body>
+
+</html>

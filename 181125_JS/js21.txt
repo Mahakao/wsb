@@ -1,0 +1,66 @@
+    <script>
+        window.onload = function(){ //lista kompetencji do podniesienia
+         /* 
+           var toDos = ["TypeScript", "HTML5", "JQuery", "BOOTSTRAP"];
+           //alert(toDos[2]); //jQuery
+           /*toDos[1] = "Xamarin"; //zmiana
+           toDos.push("AngularJS"); //dodanie
+           toDos.splice(1,1); //usuñ od 1 indeksu 1 element
+           alert(toDos.sort());
+           
+           var clone = toDos.slice(); //klonowanie tablicy, zeby nie bylo przez referencje
+           //slice(2) -> utwórz tablicê pocz¹wszy od 2
+           clone[0] = "JavaScript";
+
+           alert(toDos); //sklonowanie tablicy
+            
+            //klonowanie w jQ
+            //$.extend({aa: "aa"}, document.getElementById("tToDo"));
+            //klonowanie g³êbokie
+            //$.extend(true, {aa: "aa"}, document.getElementById("tToDo"));
+    
+*/
+        };    
+
+// var a = 5;
+// var b = a;
+// b = 10; //a = 5 wciaz
+    </script>
+
+    <script>
+    
+        window.onload = function() {
+            /* pobralismy wszystkie p jako tablice
+            alert(document.getElementsByTagName("p")[0].innerHTML); */
+
+
+/*
+            //pobiera wszystkie paragraphy
+            var paragraphs = document.getElementsByTagName("p");
+            // jedna iteracja = przekazanie jednego paragraphu
+            // paragraphs.forEach(function(paragraph){ <- do P akurat nie dziala forEach
+                for (var i = 0; i < paragraphs.length; i++) {
+                    if (paragraphs[i].innerHTML == "Mam pojêcie") {
+                    // if (paragraphs[i].innerHTML.includes("Mam pojêcie") {
+                        paragraphs[i].style.color = "Red";
+                        paragraphs[i].style["font-weight"] = "bold";
+                    }
+                }
+*/
+
+/*
+            var paragraphs = document.querySelectorAll("#dToDos p");
+                for (var i = 0; i < paragraphs.length; i++) {
+                    if (paragraphs[i].innerHTML == "Mam pojêcie") {
+                    // if (paragraphs[i].innerHTML.includes("Mam pojêcie") {        
+                        // paragraphs[i].setAttribute("style", "color: green; font-weight: 800");
+                        // paragraphs[i].setAttribute("class", "highlight-pink");
+                        
+                        // classList.remove <- usuwa klase
+                        paragraphs[i].classList.add("highlight-pink");
+                    }
+                }
+
+*/    
+        };
+    </script>

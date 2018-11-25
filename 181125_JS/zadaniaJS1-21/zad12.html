@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <script>
+        window.onload = function(){
+            var tSearch = document.getElementById("tSearch"); //kontrolka search text
+            var pDescription = document.getElementById("pProductDescription"); //paragraf z opisem produktu
+            var pDescriptionOriginalText = document.getElementById("pProductDescription").innerHTML;
+
+            tSearch.onkeyup = function(){ //po puszczeniu klawisza
+                var tSearchText = this.value; //this oznacza aktualny element -> kontrolka tSearch
+                pDescription.innerHTML = pDescriptionOriginalText.replace(
+                                         new RegExp(tSearchText, 'ig'), 
+                                         '<span style="background-color: yellow;">' + tSearchText + '</span>');
+            };
+            
+            //<span style="background-color: yellow;">Studia </span>
+            {
+            //alert(pDescription.length); //liczba znaków
+            //alert(pDescription.trim().toLowerCase().indexOf("studia")); //pozycja tekstu w tekscie   
+            //alert(pDescription.replace("działających w środowisku Internet", "jako aplikacji webowych"));   
+            /*alert(pDescription.substr(
+                 pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length,
+                 pDescription.length - (pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length)         
+                 )
+            );
+            alert(pDescription.substring(
+                pDescription.indexOf("dla wszystkich osób, ") + "dla wszystkich osób, ".length,
+                pDescription.length //10 - 0..9         
+                )
+            );*/
+            }
+        };    
+    </script>
+</head>
+
+<body>
+    <input id="tSearch" type="text" placeholder="Podaj tekst wyszukiwania" />
+    <p id="pProductDescription">  Studia poświęcone są nauce programowania nowoczesnych serwisów internetowych oraz złożonych rozproszonych systemów informatycznych działających w środowisku Internet, wykorzystujących w warstwie prezentacji przeglądarkę internetową. Niniejsze studia podyplomowe stanowią podstawę, bądź uzupełnienie wcześniej zdobytych wiadomości o narzędzia wykorzystywane przy tworzeniu nowoczesnych serwisów internetowych. Dają one także możliwość aktualizacji wiedzy dla osób, które edukację informatyczną zakończyły kilka lat temu. Są przeznaczone nie tylko dla informatyków, ale dla wszystkich osób, które chciałyby zostać programistą aplikacji webowych</p>
+</body>
+</html>

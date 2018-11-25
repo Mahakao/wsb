@@ -1,0 +1,103 @@
+<html>
+
+<head>
+
+    <style>
+        .highlight-pink {
+            color: pink;
+            font-weight: 900;
+        }
+
+        .highlight-green {
+            border: 2px solid green;
+        }
+    </style>
+
+
+    
+
+    
+<script>
+        window.onload = function() {
+            var tNewToDo = document.getElementById("tToDo");
+            var tsearchToDos = document.getElementById("tSearchToDos");
+            var olToDo = document.getElementById("olToDos");
+    
+            tNewToDo.onkeyup = function(event) {
+                if (event.keyCode == 13)
+                {
+                // alert(tNewToDo.value);
+
+                var NewToDo = tNewToDo.value;
+
+                var liNewToDo = document.createElement("li")
+                var textNodeNewToDo = document.createTextNode(NewToDo);
+                liNewToDo.appendChild(textNodeNewToDo);
+                
+                var btnDeleteToDo = document.createElement("button");
+                var textNodeDeleteToDo = document.createTextNode("x");
+
+                btnDeleteToDo.appendChild(textNodeDeleteToDo);
+                // btnDeleteToDo.setAttribute("onclick", "deleteToDo('" + liNewToDo + '"');
+                liNewToDo.appendChild(btnDeleteToDo);
+                
+                olToDos.appendChild(liNewToDo);
+                
+               /* var para = document.createElement("p"); //robi <p></p>
+                var node = document.createTextNode("This is new. ");
+                para.appendChild(node);
+                var child = document.getElementById("p1");
+                var element = document.getElementById("d1");
+                element.insertBefore(para, child);
+
+                <div id="d1">
+                    <p id="p1"></p>
+                </div>
+                */
+                }
+            }
+            //1. po  najechaniu na tNewToDo podswietlenie (obramowanie) kontrolki jesli nie ma w niej tekstu
+            //onmouseover, onmouseout
+            tNewToDo.onmouseover = function(event) {
+                if (tNewToDo.value == "") {
+                    tNewToDo.classList.add("highlight-green");
+                }
+            };
+            tNewToDo.onmouseout = function(event) {
+                if (tNewToDo.value == "" || tNewToDo != "" ) {
+                    tNewToDo.classList.remove("highlight-green");
+                }
+            };
+
+        };
+        </script>
+
+
+
+</head>
+
+<body>
+
+    <div>Add new todo <input id="tToDo" type="text" /></div>
+    <div>Search todos <input id="tSearchToDos" type="text"></div>
+
+    <ol id="olToDos">
+
+
+    </ol>
+
+
+    <!-- <div id="dToDos">
+        <p id="pResult">Nie mam pojęcia</p>
+        <p id="pResult">Nie mam pojęcia</p>
+        <p id="pResult">Mam pojęcie</p>
+        <p id="pResult">Nie mam pojęcia</p>
+        <p id="pResult">Nie mam pojęcia</p>
+        <p id="pResult">Mam pojęcie</p>
+        <p id="pResult">Nie mam pojęcia</p>
+    </div>
+    <p id="pResult">Nie mam pojęcia</p>
+    <p id="pResult">Nie mam pojęcia</p>
+    <p id="pResult">Mam pojęcie</p> -->
+</body>
+</html>
