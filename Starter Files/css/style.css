@@ -1,0 +1,154 @@
+@import 'https://fonts.googleapis.com/css?family=Alegreya+Sans';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #BBDEFB;
+    color: azure;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+h2 {
+    font-size: 250%;
+    /* bold. standard == 400 */
+    font-weight: 700;
+    text-align: center;
+    padding-top: 2%;
+}
+
+h3 {
+    font-size: 175%;
+    line-height: 150%;
+    padding: 5% 0;
+    font-weight: 400;
+}
+
+p {
+    font-size: 160%;
+    line-height: 150%;
+    padding: 3%;
+    /* ? */
+    text-indent: 2%;
+    text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+header {
+    background-color: rgb(56, 111, 163);
+    width: 100%;
+    height: 85px;
+}
+
+#header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#logo {
+    /* background-image: url("../img/RD.png");
+    background-repeat: no-repeat; */
+    background: url("../img/RD.png") no-repeat center;
+    margin: 20px;
+    float: left;
+    width: 200px;
+    height: 60px;
+}
+
+nav {
+    float: right;
+    padding: 25px 20px 0 0;
+}
+
+#menu-icon {
+    background: url("../img/nav.png") no-repeat center;
+    width: 40px;
+    height: 40px;
+    display: hidden;
+}
+
+a:hover#menu-icon {
+    border-radius: 4px 4px 0 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-size: 150%;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+nav ul li a {
+    color: azure;
+    text-decoration: none;
+}
+
+nav ul li a:hover, .current {
+    color: antiquewhite;
+}
+
+.banner {
+    width: 100%;
+    background-color: rgb(56, 111, 163);
+}
+
+#banner-inner {
+    max-width: 1200px;
+    margin: 0 auto;   
+}
+
+.one-fourth {
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+#html, #desktop-text {
+    background-color: coral;
+
+}
+
+#css, #mobile-text {
+background-color: lightsteelblue;
+}
+
+#seo {
+    background-color: #A9DFBF;
+}
+
+#social, #tablet-text {
+    background-color: #AAB7B8;
+}
+
+.one-fourth i {
+    font-size: 500%;
+    padding: 10%;
+}
+
+.one-second {
+    /* tu background color nie działa 
+    background-color: #BBDEFB; */
+    width: 100%;
+    /* wszystkie wczesniejsze floaty sie kasuje */
+    clear: both;
+}
+
+article, aside {
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+
